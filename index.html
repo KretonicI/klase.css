@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 16px;
+            color: darkblue;
+            background-color: white;
+        }
+        h1{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        h2{
+            font-size: 16px;
+            margin: 0 0 0.5em 0;
+        }
+        div{
+            font-size: 8pt;
+            background-color: yellow;
+            padding: 3px;
+            border: 1px blue solid;
+            margin: 0.5em 0;
+        }
+        .fc div:first-child{
+            font-weight: bold;
+            background-color: lightgreen;
+        }
+        .nth1 div:nth-child(odd){
+            font-weight: bold;
+            background-color: lightgreen;
+        }
+        .nth2 *:nth-child(-n+3){
+            font-weight: bold;
+            background-color: #fcc;
+        }
+        .fot div:first-of-type{
+            font-weight: bold;
+            background-color: #ecf;
+        }
+        .oot *:only-of-type{
+            font-weight: bold;
+            background-color: magenta;
+    
+}
+.nthl div:nth-last-of-type(2){
+    font-weight: bold;
+    background-color: #ccf;
+}
+.ntt div.kk:nth-last-of-type(odd){
+    font-weight: bold;
+    background-color: orange;
+}
+    </style>
+</head>
+<body>
+    <h1>Pseudo klase</h1>
+   <h2>Div:first-child</h2>
+   Svaki div element koji je <b>prvi</b> element na svom hijerarhiskom nivou.
+   <section class="fc">
+    <div>Prvi div blok u sekciji</div>
+    <div>drugi blok u sekciji
+        <p>Prvi pragraf unutra drugog bloka</p>
+        <div>Prvi div blok unutar drugog</div>
+    </div>
+    <div>Treći div blok
+    <div>Prvi div blok unutar trećeg</div>
+    <div>drugi div blok unutar trećeg</div>
+    </div>
+   </section>
+   
+   <h2> Div:nth-child (odd)</h2>
+   svaki div element koji je na <b>neparnoj</b> poziciji u svom nivou.
+   <section class="nth1">
+    <div>Prvi blok u sekciji</div>
+    <div>drugi blok u sekciji</div>
+    <p>Umetnut paragraf</p>
+    <div>Treći blok u sekciji</div>
+    <div>Četvrti blok u sekciji</div>
+    <div>Peti blok u sekciji</div>
+   </section>
+
+   <h2>*:nth-child(-n+3)</h2>
+   Bilo koja <b>prva tri elementa</b> na nivou
+   <section class="nth2">
+    <div>Prvi div blok u sekciji</div>
+    <div>Drugi blok u sekciji</div>
+    <p>Umetnut paragraf</p>
+    <div>Treći blok u sekciji</div>
+    <div>Četvrti blok u sekciji</div>
+    <div>Peti blok u sekciji</div>
+   </section>
+
+   <br><hr><br>
+
+   <h2>Div: first-of-type</h2>
+   Svaki div element, <b>ako je prvi</b> od divova na svom hijerarhijskom nivou
+   <section class="fot">
+    <div>Prvi div blok u sekciji</div>
+    <div>Drugi blok u sekciji</div>
+    <p>Umetnut paragraf</p>
+    <div>Treći blok u sekciji
+        <p>Paragraf unutar trećeg bloka</p>
+        <div>Prvi div u trećem bloku</div>
+        <div>Drugi div u trećem bloku</div>
+    </div>
+    <div>Četvrti blok u sekciji</div>
+    <div>Peti blok u sekciji</div>
+   </section>
+   <hr>
+   <h2>*:only-of-type</h2>
+   Svaki element <b>koji je jedini</b> (jedini paragraf, jedini div...) na svom hijerarhijskom nivou
+  <section class="oot">
+    <div>Prvi div blok u sekciji</div>
+    <div>drugi div blok u sekciji</div>
+    <p>Jedini praragraf u velikom bloku</p>
+    <div>Treći div blok
+        <p>Paragraf untar trećek bloka</p>
+        <div>Jedini paragraf u trećem bloku</div>
+        <p>Drugi paragraf u trećem bloku</p>
+    </div>
+    <div>Četvrti blok u bloku</div>
+    <div>Peti blok u bloku</div>
+  </section>
+
+  <h2>div:nth-last-of-type</h2>
+  <b>Predposljednji</b> div od svih div elemenata na svom hijerarhijskom nivou.
+  <section class="nthl">
+    <div>Prvi div blok u sekciji</div>
+    <div>Drugi blok u sekciji</div>
+    <p>Jedini paragraf u velikom bloku</p>
+    <div>Treći blok u sekciji
+        <p>Paragraf unutar trećeg bloka</p>
+        <div>Prvi div u trećem bloku</div>
+        <div>Drugi div u trećem bloku</div>
+    </div>
+    <div>Četvrti blok u sekciji</div>
+    <p>Paragraf je predposljednji element</p>
+    <div>Peti blok u sekciji</div>
+  </section>
+
+  <h2>Div.kk:nth-of-type(odd)</h2>
+  Svaki <b>neparni</b> od div blokova na istom nivou, ali <b>samo ako je klase kk</b>
+  <section class="ntt">
+    <div class="kk">Prvi div blok u sekciji klase kk</div>
+    <div class="kk">Drugi blok u sekciji klase kk </div>
+        <p>Prvi pragraf u sekciji </p>
+        <div>Treći div blok</div>
+    <div class="kk"></div>
+    <p class="kk">Paragraf klase kk</p>
+    <div class="kk">Peti div blok klase kk</div>
+    
+  </section>
+</body>
+</html>
